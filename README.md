@@ -4,6 +4,20 @@ This is an ASP.NET Core MVC Inventory Management System built with Entity Framew
 
 ---
 
+## 🚀 Task
+Create a ASP.NET Core application to manage a simple inventory system for a store. The system should allow users to view a list of available products, add new products, and update existing ones. Each product should have a name, description, price, and quantity. Use EF to persist the product information in a MySQL database.
+
+## Acceptance Criteria: 
+There are all the required codes and configs in the repository to run the application. 
+There is a readme.md file with the application description and instructions on how to run it. 
+Code is of good quality and easy to read and understand. 
+There are unit tests in place, coverage >80% 
+There are quality checks (coverage, complexity, check style) 
+ChatGPT conversation logs are attached in the file chat.log 
+Short feedback for each task added to readme.md in the following format: - Was it easy to complete the task using AI? - How long did task take you to complete? (Please be honest, we need it to gather anonymized statistics) - Was the code ready to run after generation? What did you have to change to make it usable?- Which challenges did you face during completion of the task?- Which specific prompts you learned as a good practice to complete the task?
+
+---
+
 ## 🚀 Features
 
 - Manage products (Create, Read, Update, Delete)
