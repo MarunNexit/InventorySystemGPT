@@ -144,3 +144,19 @@ docker-compose down -v
 ## 📜 License
 
 MIT License. See LICENSE for details.
+
+
+
+## 📝 Feedback on Task Completion
+
+- **Was it easy to complete the task using AI?**  
+  Yes, AI provided clear guidance for most parts, though some manual adjustments were needed.
+
+- **How long did the task take you to complete?**  
+  Approximately 2.5 hours.
+
+- **Which challenges did you face during completion of the task?**  
+  The most challenging part was setting up and configuring the database correctly.
+
+- **Which specific prompts did you learn as a good practice to complete the task?**  
+  Asking for detailed step-by-step instructions and error fixes proved most helpful.

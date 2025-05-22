@@ -96,7 +96,7 @@ namespace InventorySystem.Tests
                 Assert.That(_pageModel.ShowModal, Is.False);
                 Assert.That(_pageModel.ModelState.IsValid, Is.True); // Assuming no ModelState error is added manually
                 Assert.That(result, Is.InstanceOf<RedirectToPageResult>());
-                Assert.That(_pageModel.TempData["ErrorMessage", Is.EqualTo("Product with ID 9999 not found."));
+                Assert.That(_pageModel.TempData["ErrorMessage"], Is.EqualTo("Product with ID 9999 not found."));
             });
         }
 
