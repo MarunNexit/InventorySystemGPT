@@ -31,9 +31,6 @@ publish/
 # Ignore Rider IDE files
 .idea/
 
-# Ignore log files
-*.log
-
 # Ignore temporary files
 *.tmp
 *.temp
