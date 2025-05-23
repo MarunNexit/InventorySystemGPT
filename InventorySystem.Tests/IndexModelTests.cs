@@ -1,6 +1,7 @@
 using InventorySystem.Data;
 using InventorySystem.Models;
 using InventorySystem.Pages.Products;
+using InventorySystem.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
@@ -13,6 +14,7 @@ namespace InventorySystem.Tests
     {
         private ApplicationDbContext _context;
         private IndexModel _pageModel;
+        private Mock<ProductService> _mockProductService;
 
         [SetUp]
         public void Setup()
@@ -24,7 +26,8 @@ namespace InventorySystem.Tests
             _context = new ApplicationDbContext(options);
             _context.Database.EnsureDeleted(); // Clean slate each time
 
-            _pageModel = new IndexModel(_context);
+            _mockProductService = new Mock<ProductService>();
+            _pageModel = new IndexModel(_mockProductService.Object);
         }
 
         [Test]

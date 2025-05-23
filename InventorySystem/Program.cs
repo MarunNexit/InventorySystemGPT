@@ -1,4 +1,5 @@
 using InventorySystem.Data;
+using InventorySystem.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     new MySqlServerVersion(new Version(8, 0, 36))));
 
+builder.Services.AddScoped<ProductService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,51 @@
+﻿@model InventorySystem.Pages.Products.IndexModel
+
+<div class="modal fade @(Model.ShowModal ? "show d-block" : "")"
+     tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-modal="@(Model.ShowModal ? "true" : "false")" aria-hidden="@(Model.ShowModal ? "false" : "true")"
+     style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">@((Model.IsEditing) ? "Edit Product" : "Add New Product")</h5>
+                <form method="post" asp-page-handler="Cancel" class="m-0 p-0">
+                    <button type="submit" class="btn-close" aria-label="Close"></button>
+                </form>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="Save" class="needs-validation" novalidate>
+                    <input type="hidden" asp-for="Product.Id" />
+
+                    <div class="mb-3">
+                        <label asp-for="Product.Name" class="form-label"></label>
+                        <input asp-for="Product.Name" class="form-control" required />
+                        <span asp-validation-for="Product.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Product.Description" class="form-label"></label>
+                        <textarea asp-for="Product.Description" class="form-control" rows="3" required></textarea>
+                        <span asp-validation-for="Product.Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Product.Price" class="form-label"></label>
+                        <input asp-for="Product.Price" class="form-control" type="number" step="0.01" min="0" required />
+                        <span asp-validation-for="Product.Price" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Product.Quantity" class="form-label"></label>
+                        <input asp-for="Product.Quantity" class="form-control" type="number" min="0" required />
+                        <span asp-validation-for="Product.Quantity" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-success me-2">@((Model.IsEditing) ? "Save Changes" : "Add Product")</button>
+                </form>
+
+                <form method="post" asp-page-handler="Cancel" class="d-inline">
+                    <button type="submit" class="btn btn-secondary">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

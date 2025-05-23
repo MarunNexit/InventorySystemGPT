@@ -50,8 +50,8 @@ Short feedback for each task added to readme.md in the following format: - Was 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/inventory-management.git
-cd inventory-management
+git clone https://github.com/MarunNexit/InventorySystemGPT.git
+cd InventorySystem
 ```
 
 2. Create a `docker-compose.yml` file or use the provided one:
